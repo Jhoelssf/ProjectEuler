@@ -16,12 +16,9 @@ class App {
   }
 
   mountErrorHandlers() {
-    this.expressApp.use(
-      '**',
-      (err: Error, req: Request, res: Response, next: NextFunction) => {
-        res.status(404).send('Path not found');
-      }
-    );
+    this.expressApp.use((req: Request, res: Response, next: NextFunction) => {
+      res.status(404).send('Path not found');
+    });
   }
 }
 

@@ -4,9 +4,6 @@
 export function multiplesOf3Or5(n: number): number {
   let resp = 0;
   for (let i: number = 0; i < n; i++) {
-    // const e = isMultipleOf(i, 3) || isMultipleOf(i, 5) ? i : 0;
-    // console.log(e);
-
     resp += isMultipleOf(i, 3) || isMultipleOf(i, 5) ? i : 0;
   }
   return resp;

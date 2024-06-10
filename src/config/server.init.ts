@@ -14,7 +14,7 @@ export class ServerInit {
       server
         .listen(port)
         .on('listening', () => {
-          console.log(`Server is listening on port ${port}`);
+          console.log(`Server is listening on port ${port} !!`);
           resolve(server);
         })
         .on('error', (err) => {

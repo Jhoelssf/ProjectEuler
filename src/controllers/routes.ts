@@ -14,9 +14,12 @@ export class ExercisesRoute {
       '/exercise1',
       this.controller.multiplesOf3Or5.bind(this.controller)
     );
+    this.router.post(
+      '/exercise2',
+      this.controller.fibonacci.bind(this.controller)
+    );
   }
 }
 
 const controller = new ExercisesController();
-
 export default new ExercisesRoute(controller).router;
